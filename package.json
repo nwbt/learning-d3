@@ -6,7 +6,9 @@
   "scripts": {
     "test": "mocha spec/index.js",
     "lint": "eslint src/*.js",
-    "start": "webpack-dev-server --inline --content-base src/"
+    "start": "webpack-dev-server --inline --content-base src/",
+    "build": "webpack",
+    "clean": "rm -fr ./build"
   },
   "repository": {
     "type": "git",
