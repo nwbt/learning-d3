@@ -8,7 +8,7 @@
  * statements and also ES6 module definitions.
  */
 
-var path = require('path');
+let path = require('path');
 module.exports = {
   entry: {
     app: ['./src/index.js'] // This is the main file that gets loaded first; the "bootstrap", if you will.
@@ -29,7 +29,7 @@ module.exports = {
         test: /\.js?$/, // Another convention is to use the .es6 filetype, but you then
                         // have to supply that explicitly in import statements, which isn't cool.
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       // This nifty bit of magic right here allows us to load entire JSON files
       // synchronously using `require`, just like in NodeJS.
